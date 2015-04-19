@@ -53,9 +53,34 @@ function questionApp() {
     else if (answerArray[0] == avgAnswer){
       adviceText.innerHTML = "Average amount of sleep";
     }
-    else if (answerArray[10] == aboveAvg){
-      adviceText.innerHTML = "Oversleeping can be a symptom of many health issues such as depression, sleep apnea or hyposomnia! You may want to talk to your doctor about this."
+    else if (answerArray[10] == aboveAvgAnswer){
+      adviceText.innerHTML = "Oversleeping can be a symptom of many health issues such as depression, sleep apnea or hyposomnia! You may want to talk to your doctor about this.";
     }
+    
+
+    //EXERCISE TEST
+    if (answerArray[1] == belowAvgAnswer){
+      adviceText.innerHTML = "You should exercise more";
+    }
+    else if (answerArray[1] == avgAnswer){
+      adviceText.innerHTML = "Average amount of exercise!";
+    }
+    else if (answerArray[1] == aboveAvgAnswer){
+      adviceText.innerHTML = "This is above average for exercising";
+    }
+
+
+    //PERSONAL TIME TEST
+    if (answerArray[2] == belowAvgAnswer){
+      adviceText.innerHTML = "You really need more personal time";
+    }
+    else if (answerArray[2] == avgAnswer){
+      adviceText.innerHTML = "This is a good amount of personal time";
+    }
+    else if (answerArray[2] == aboveAvgAnswer){
+      adviceText.innerHTML = "You got a lot of time on your hands";
+    }
+
 
     //finalScoreText.innerHTML = "Your final stress level is " + score + " out of " + questionCount +", I know exactly what you need right now...";
     
