@@ -60,7 +60,7 @@ function questionApp() {
     finalScore.getElementsByClassName("content").innterHTML = adviceText;
     finalScore.setAttribute("id","score");
     finalScore.className = "appear";
-      console.log("Everyone get some sleep!");
+    console.log("Everyone get some sleep!");
     for(j=0;j<3;j++) {
 
     if (answerArray[j] == answerArray[0]){
