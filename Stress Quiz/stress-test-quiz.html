@@ -8,10 +8,20 @@
 </head>
 <body>
 	<div id="wrapper">
-		<button id="start" onclick="questionApp();">START QUIZ</button>
-		<h1> Stress Test</h1>
+        <h1> Stress Test</h1>
+        <div class="content">
+            <h2 id="question-name"></h2>
+            <select id="question-select">
+                <option id = "option-1"></option>
+                <option id = "option-2"></option>
+                <option id = "option-3"></option>
+                <option id = "option-4"></option>
+            </select>
+            <button class="question-button">Submit</button>
+            </div>
+        <button id="start" onclick="questionApp();">START QUIZ</button>
 	</div>
 	<script src="question.js"></script>
-	<script src="question-app.js"></script>
+	<script src="question-app3.js"></script>
 </body>
 </html>
