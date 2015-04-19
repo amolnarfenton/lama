@@ -23,7 +23,6 @@ function questionApp() {
     } else if (answerNumber == aboveAvgAnswer){
       aboveAvgScore++;
     }
-
     //PUTTING ANSWERS INTO ARRAY
     answerArray.push(answerNumber);
 
@@ -52,8 +51,11 @@ function questionApp() {
     if (answerArray[0] == belowAvgAnswer){
       adviceText.innerHTML = "You should sleep more!";
     }
-    else if (answerArray[10] == avgAnswer){
+    else if (answerArray[0] == avgAnswer){
       adviceText.innerHTML = "Average amount of sleep";
+    }
+    else if (answerArray[10] == aboveAvg){
+      adviceText.innerHTML = "Oversleeping can be a symptom of many health issues such as depression, sleep apnea or hyposomnia! You may want to talk to your doctor about this."
     }
 
     //finalScoreText.innerHTML = "Your final stress level is " + score + " out of " + questionCount +", I know exactly what you need right now...";
@@ -79,7 +81,6 @@ function questionApp() {
     questionDiv.setAttribute("id", "question"+currentQuestion);
     var questionTitle = document.createElement("h2");
     var questionSelect = document.createElement("select");
-    
     
     
     wrapper.appendChild(questionDiv);
