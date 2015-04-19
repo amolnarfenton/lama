@@ -1,5 +1,6 @@
 var Questions = { "question" : [
   {
+
     "question"  : "On average, how many hours do you sleep per night?",
      "choice1"  : "< 6",
      "choice2"  : "6-10",
@@ -7,8 +8,7 @@ var Questions = { "question" : [
      "belowAvg" : 1,
      "average"  : 2,
      "aboveAvg" : 3            
-  },
-  
+  },  
   {
     "question"  : "How often do you exercise in a typical week?",
      "choice1"  : "Never",
@@ -16,8 +16,9 @@ var Questions = { "question" : [
      "choice3"  : "6+",
      "belowAvg" : 1,
      "average"  : 2,
-     "aboveAvg" : 3             
-  },
+     "aboveAvg" : 3  
+  }, 
+
   {
     "question"  : "How much personal time do you take per day, in hours?",
      "choice1"  : "0-4",
@@ -27,5 +28,4 @@ var Questions = { "question" : [
      "average"  : 2,
      "aboveAvg" : 3                           
   }
-
 ]};
