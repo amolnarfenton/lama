@@ -65,7 +65,7 @@ html, body {
 }
 	  
 html {
-  background-image: url("http://www.desktopwallpaperhd.net/wallpapers/20/a/art-vector-flowers-background-wallpaper-image-207562.jpg");
+  background-image: url("images/leaves.jpg");
   font-family: 'helvetica neue', sans-serif;
   font-size: 10px;
 }
@@ -84,13 +84,13 @@ html {
   background-color: rgba(255,255,255,0.5);
   padding: 1rem;
   bottom: 50%;
-  left: 50%;
-  right: 50%;
+  left: 20%;
+  right: 0;
 }
 	  
 #wrapper #score {
-  height: 180px;
-  background: url(images/background2.jpg) center;
+  height: 300px;
+  background: url(images/background2.jpg);
   background-color: rgba(255,255,255,1);
 }
 
@@ -106,8 +106,8 @@ h1 {
 
 #score h1 {
   text-align: center;
-  font-size: 4rem;
-  padding: 12rem 0 0 1rem;
+  font-size: 3rem;
+  padding: 8rem 1rem 1rem 1rem;
 }
 
 /* || buttons */
