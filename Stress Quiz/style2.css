@@ -146,6 +146,10 @@ div button {
   background-color: #ccc;
 }
 
+#question-select{
+  visibility: hidden;   
+}
+
 @media all and (max-width: 500px) {
   #wrapper {
     width: 100%;

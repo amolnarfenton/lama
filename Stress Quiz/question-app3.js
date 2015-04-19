@@ -15,7 +15,7 @@ function questionApp() {
   var start = document.getElementById("start");
   start.setAttribute("disabled","disabled");
   document.getElementById("start").style.visibility = "hidden";
-//    document.getElementById("question-select").style.visibility = "visible";
+    document.getElementById("question-select").style.visibility = "visible";
 //    document.getElementsByClassName("question-button").style.visibility = "visible";
     
   function checkAnswer(question,userAnswer,button) {
@@ -57,7 +57,7 @@ function questionApp() {
     var finalScore = document.createElement("div");
     var adviceText = document.createElement("h1");
     wrapper.getElementsByClassName("content")[0].innerHTML = finalScore;
-    finalScore.getElementById("h1").innterHTML = adviceText;
+//    finalScore.getElementById("content").innterHTML = adviceText;
     finalScore.setAttribute("id","score");
     finalScore.className = "appear";
 
