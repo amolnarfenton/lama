@@ -25,7 +25,6 @@ function questionApp() {
     }
     //PUTTING ANSWERS INTO ARRAY
     answerArray.push(answerNumber);
-
     
     button.setAttribute("disabled","disabled");
             

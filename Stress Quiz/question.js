@@ -9,7 +9,6 @@ var Questions = { "question" : [
      "average"  : 2,
      "aboveAvg" : 3            
   },
-  
   {
     "question"  : "How often do you exercise in a typical week?",
      "choice1"  : "Never",
