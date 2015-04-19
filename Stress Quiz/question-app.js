@@ -39,7 +39,7 @@ function questionApp() {
     console.log("this is the array" + answerArray);
 
 
-    button.setAttribute("disabled","disabled");
+    //button.setAttribute("disabled","disabled");
 
             
     if(currentQuestion === questionCount) {
