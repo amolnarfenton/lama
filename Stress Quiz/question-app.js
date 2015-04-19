@@ -5,7 +5,7 @@ function questionApp() {
   var currentQuestion = 1;
   var questionCount = Questions.question.length;
   var wrapper = document.getElementById("wrapper");
-  var answerArray = [];
+  var answerArray = new Array(3);
   
   var start = document.getElementById("start");
   start.setAttribute("disabled","disabled");
@@ -42,9 +42,9 @@ function questionApp() {
   
   function finalScore() {
     var finalScore = document.createElement("div");
-    var adviceText = document.createElement("p");
+    var adviceText = document.createElement("h1");
     wrapper.appendChild(finalScore);
-    finalScore.appendChild(finalScoreText);
+    finalScore.appendChild(adviceText);
     finalScore.setAttribute("id","score");
     finalScore.className = "appear";
 
@@ -56,8 +56,7 @@ function questionApp() {
       adviceText.innerHTML = "Average amount of sleep";
     }
 
-
-    finalScoreText.innerHTML = "Your final stress level is " + score + " out of " + questionCount +", I know exactly what you need right now...";
+    //finalScoreText.innerHTML = "Your final stress level is " + score + " out of " + questionCount +", I know exactly what you need right now...";
     
     var resetButton = document.createElement("button");
     finalScore.appendChild(resetButton);
@@ -88,7 +87,7 @@ function questionApp() {
     questionTitle.innerHTML = "Question " + currentQuestion + ": " + selectedQuestion.question;
     questionDiv.appendChild(questionSelect);
     
-    for(j=1;j<=5;j++) {
+    for(j=1;j<=3;j++) {
       var choice = "selectedQuestion.choice" + j;
       var choiceOption = document.createElement("option");
       choiceOption.setAttribute("value", "choice"+j);
@@ -110,9 +109,7 @@ function questionApp() {
         
     var currentButton = document.getElementById("button"+currentQuestion);
     
-    currentButton.addEventListener('click', function(){
-      checkAnswer(selectedQuestion,questionSelect.value,currentButton);
-    }, false);
+    currentButton.addEventListener('click', function(){checkAnswer(selectedQuestion,questionSelect.value,currentButton);}, false);
   }
   
   generateQuestion();
