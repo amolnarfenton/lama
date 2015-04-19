@@ -23,7 +23,6 @@ function questionApp() {
     } else if (answerNumber == aboveAvgAnswer){
       aboveAvgScore++;
     }
-
     //PUTTING ANSWERS INTO ARRAY
     answerArray.push(answerNumber);
 
