@@ -79,19 +79,20 @@ html {
 }
 	  
 	  
+/*
 #wrapper div {
-  /*position:absolute;*/
+  position:absolute;
   background-color: rgba(255,255,255,0.5);
   padding: 1rem;
   bottom: 50%;
   left: 23%;
   right: 0;
 }
-	  
+*/
+	   
 #wrapper #score {
   position:fixed align-content:stretch;     
   height: 500px;
-  width: 1000px;
   background: url(images/background2.jpg) center;
   background-color: rgba(255,255,255,1);
 }

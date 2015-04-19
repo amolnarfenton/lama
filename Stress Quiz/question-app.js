@@ -52,7 +52,7 @@ function questionApp() {
   }
   
   function generateQuestion() {
-    var selectedQuestion = Questions.question[currentQuestion-1];
+    var selectedQuestion = Questions.question[currentQuestion-1]; //
     var questionDiv = document.createElement("div");
     questionDiv.setAttribute("id", "question"+currentQuestion);
     var questionTitle = document.createElement("h2");
