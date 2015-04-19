@@ -65,13 +65,13 @@ html, body {
 }
 	  
 html {
-  background-image: url(images/leaves.jpg);
+  background: white;
   font-family: 'helvetica neue', sans-serif;
   font-size: 12px;
 }
 	  
 #wrapper {
-  background: white;
+  background-image: url(images/leaves.jpg);
   width: 1000px;
   margin: 2rem auto;
   height: 500px;
@@ -101,7 +101,7 @@ html {
 
 h1 {
   font-family: Tahoma, Geneva, sans-serif;
-  color: #ccc;
+  color: #336600;
   font-size: 7rem;
   text-align: center;
   padding: 1rem 1rem 0 0;
