@@ -1,8 +1,11 @@
 function questionApp() {
-  var score = 0;
+  var avgScore = 0;
+  var belowAvgScore = 0;
+  var aboveAvgScore = 0;
   var currentQuestion = 1;
   var questionCount = Questions.question.length;
   var wrapper = document.getElementById("wrapper");
+  var answerArray = new Array(3);
   
   var start = document.getElementById("start");
   start.setAttribute("disabled","disabled");
@@ -10,10 +13,20 @@ function questionApp() {
   function checkAnswer(question,userAnswer,button) {
     var answerSplit = userAnswer.split("");
     var answerNumber = answerSplit[answerSplit.length-1];
-    var correctAnswer = question.correct;
-    if(answerNumber == correctAnswer) {
-      score++;
-    } 
+    var avgAnswer = question.average;
+    var belowAvgAnswer = question.belowAvg;
+    var aboveAvgAnswer = question.aboveAvg;
+    if(answerNumber == avgAnswer) {
+      avgScore++;
+    } else if (answerNumber == belowAvgAnswer) {
+      belowAvgScore++;
+    } else if (answerNumber == aboveAvgAnswer){
+      aboveAvgScore++;
+    }
+
+    //PUTTING ANSWERS INTO ARRAY
+    answerArray.push(answerNumber);
+
     
     button.setAttribute("disabled","disabled");
             
@@ -29,12 +42,21 @@ function questionApp() {
   
   function finalScore() {
     var finalScore = document.createElement("div");
-    var finalScoreText = document.createElement("h1");
+    var adviceText = document.createElement("h1");
     wrapper.appendChild(finalScore);
-    finalScore.appendChild(finalScoreText);
+    finalScore.appendChild(adviceText);
     finalScore.setAttribute("id","score");
     finalScore.className = "appear";
-    finalScoreText.innerHTML = "Your final stress level is " + score + " out of " + questionCount +", I know exactly what you need right now...";
+
+    //SLEEP TEST
+    if (answerArray[0] == belowAvgAnswer){
+      adviceText.innerHTML = "You should sleep more!";
+    }
+    else if (answerArray[10] == avgAnswer){
+      adviceText.innerHTML = "Average amount of sleep";
+    }
+
+    //finalScoreText.innerHTML = "Your final stress level is " + score + " out of " + questionCount +", I know exactly what you need right now...";
     
     var resetButton = document.createElement("button");
     finalScore.appendChild(resetButton);
@@ -65,7 +87,7 @@ function questionApp() {
     questionTitle.innerHTML = "Question " + currentQuestion + ": " + selectedQuestion.question;
     questionDiv.appendChild(questionSelect);
     
-    for(j=1;j<=5;j++) {
+    for(j=1;j<=3;j++) {
       var choice = "selectedQuestion.choice" + j;
       var choiceOption = document.createElement("option");
       choiceOption.setAttribute("value", "choice"+j);
