@@ -52,7 +52,7 @@ function questionApp() {
   }
   
   function generateQuestion() {
-    var selectedQuestion = Questions.question[currentQuestion-1];
+    var selectedQuestion = Questions.question[currentQuestion-1]; //
     var questionDiv = document.createElement("div");
     questionDiv.setAttribute("id", "question"+currentQuestion);
     var questionTitle = document.createElement("h2");
@@ -79,7 +79,7 @@ function questionApp() {
     
     var button = document.createElement("button");
     questionDiv.appendChild(button);
-    var label = document.createTextNode("ANSWER!");
+    var label = document.createTextNode("Submit");
     button.appendChild(label);
     button.setAttribute("id", "button"+currentQuestion);
     
