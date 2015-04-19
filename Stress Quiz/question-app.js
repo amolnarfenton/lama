@@ -79,7 +79,7 @@ function questionApp() {
     
     var button = document.createElement("button");
     questionDiv.appendChild(button);
-    var label = document.createTextNode("ANSWER!");
+    var label = document.createTextNode("Submit");
     button.appendChild(label);
     button.setAttribute("id", "button"+currentQuestion);
     
