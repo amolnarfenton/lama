@@ -4,9 +4,9 @@ var Questions = { "question" : [
      "choice1"  : "< 6",
      "choice2"  : "6-10",
      "choice3"  : "> 10",
-     "tooLittle": 1,
-     "healthy"  : 2,
-     "tooMuch"  : 3            
+     "belowAvg" : 1,
+     "average"  : 2,
+     "aboveAvg" : 3            
   },
   
   {
@@ -14,9 +14,9 @@ var Questions = { "question" : [
      "choice1"  : "Never",
      "choice2"  : "1-5 days",
      "choice3"  : "6+",
-     "tooLittle": 1,
-     "healthy"  : 2,
-     "tooMuch"  : 3            
+     "belowAvg" : 1,
+     "average"  : 2,
+     "aboveAvg" : 3             
   },
   
   {
@@ -24,9 +24,9 @@ var Questions = { "question" : [
      "choice1"  : "0-4",
      "choice2"  : "4-8",
      "choice3"  : "8+",
-     "tooLittle": 1,
-     "healthy"  : 2,
-     "tooMuch"  : 3                 
+     "belowAvg"`: 1,
+     "average"  : 2,
+     "aboveAvg" : 3                           
   },
   /*
   {
