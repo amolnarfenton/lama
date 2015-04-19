@@ -24,10 +24,10 @@ var Questions = { "question" : [
      "choice1"  : "0-4",
      "choice2"  : "4-8",
      "choice3"  : "8+",
-     "belowAvg"`: 1,
+     "belowAvg" : 1,
      "average"  : 2,
      "aboveAvg" : 3                           
-  },
+  }
   /*
   {
     "question"  : "Who takes over as headmaster of Hogwarts after Dumbledore's death?",
