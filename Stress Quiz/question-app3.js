@@ -57,7 +57,7 @@ function questionApp() {
     var finalScore = document.createElement("div");
     var adviceText = document.createElement("h1");
     wrapper.getElementsByClassName("content")[0].innerHTML = finalScore;
-    finalScore.getElementsByClassName("content").innterHTML = adviceText;
+    finalScore.getElementById("content").innerHTML = adviceText;
     finalScore.setAttribute("id","score");
     finalScore.className = "appear";
     console.log("Everyone get some sleep!");
