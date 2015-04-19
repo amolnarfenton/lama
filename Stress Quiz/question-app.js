@@ -1,8 +1,11 @@
 function questionApp() {
-  var score = 0;
+  var avgScore = 0;
+  var belowAvgScore = 0;
+  var aboveAvgScore = 0;
   var currentQuestion = 1;
   var questionCount = Questions.question.length;
   var wrapper = document.getElementById("wrapper");
+  var answerArray = [];
   
   var start = document.getElementById("start");
   start.setAttribute("disabled","disabled");
@@ -10,10 +13,20 @@ function questionApp() {
   function checkAnswer(question,userAnswer,button) {
     var answerSplit = userAnswer.split("");
     var answerNumber = answerSplit[answerSplit.length-1];
-    var correctAnswer = question.correct;
-    if(answerNumber == correctAnswer) {
-      score++;
-    } 
+    var avgAnswer = question.average;
+    var belowAvgAnswer = question.belowAvg;
+    var aboveAvgAnswer = question.aboveAvg;
+    if(answerNumber == avgAnswer) {
+      avgScore++;
+    } else if (answerNumber == belowAvgAnswer) {
+      belowAvgScore++;
+    } else if (answerNumber == aboveAvgAnswer){
+      aboveAvgScore++;
+    }
+
+    //PUTTING ANSWERS INTO ARRAY
+    answerArray.push(answerNumber);
+
     
     button.setAttribute("disabled","disabled");
             
@@ -29,11 +42,21 @@ function questionApp() {
   
   function finalScore() {
     var finalScore = document.createElement("div");
-    var finalScoreText = document.createElement("h1");
+    var adviceText = document.createElement("p");
     wrapper.appendChild(finalScore);
     finalScore.appendChild(finalScoreText);
     finalScore.setAttribute("id","score");
     finalScore.className = "appear";
+
+    //SLEEP TEST
+    if (answerArray[0] = belowAvgAnswer){
+      adviceText.innerHTML = "You should sleep more!";
+    }
+    else if (answerArray[10] = avgAnswer){
+      adviceText.innerHTML = "Average amount of sleep";
+    }
+
+
     finalScoreText.innerHTML = "Your final stress level is " + score + " out of " + questionCount +", I know exactly what you need right now...";
     
     var resetButton = document.createElement("button");
@@ -87,7 +110,9 @@ function questionApp() {
         
     var currentButton = document.getElementById("button"+currentQuestion);
     
-    currentButton.addEventListener('click', function(){checkAnswer(selectedQuestion,questionSelect.value,currentButton);}, false);
+    currentButton.addEventListener('click', function(){
+      checkAnswer(selectedQuestion,questionSelect.value,currentButton);
+    }, false);
   }
   
   generateQuestion();
