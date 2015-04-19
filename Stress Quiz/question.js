@@ -18,7 +18,6 @@ var Questions = { "question" : [
      "average"  : 2,
      "aboveAvg" : 3             
   },
-  
   {
     "question"  : "How much personal time do you take per day, in hours?",
      "choice1"  : "0-4",

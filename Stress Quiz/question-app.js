@@ -80,7 +80,6 @@ function questionApp() {
     var questionSelect = document.createElement("select");
     
     
-    
     wrapper.appendChild(questionDiv);
     questionDiv.appendChild(questionTitle);
     questionTitle.innerHTML = "Question " + currentQuestion + ": " + selectedQuestion.question;
