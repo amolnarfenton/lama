@@ -14,7 +14,10 @@ function questionApp() {
   
   var start = document.getElementById("start");
   start.setAttribute("disabled","disabled");
-  
+  document.getElementById("start").style.visibility = "hidden";
+//    document.getElementById("question-select").style.visibility = "visible";
+//    document.getElementsByClassName("question-button").style.visibility = "visible";
+    
   function checkAnswer(question,userAnswer,button) {
     console.log(userAnswer)
     var answerSplit = userAnswer.split("");
@@ -103,7 +106,6 @@ function questionApp() {
     }
     }
 
-    
     var resetButton = document.createElement("button");
     finalScore.getElementById("button").innerHTML = resetButton;
     var resetLabel = document.createTextNode("Let's try this again...");
