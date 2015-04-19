@@ -56,7 +56,7 @@
 /* || general positioning and stuff */
 
 article {
-  display: block;
+  display: normal;
   }
 	  
 html, body {
@@ -65,9 +65,9 @@ html, body {
 }
 	  
 html {
-  background-image: url("http://www.desktopwallpaperhd.net/wallpapers/20/a/art-vector-flowers-background-wallpaper-image-207562.jpg");
+  background-image: url(images/leaves.jpg);
   font-family: 'helvetica neue', sans-serif;
-  font-size: 10px;
+  font-size: 12px;
 }
 	  
 #wrapper {
@@ -80,16 +80,18 @@ html {
 	  
 	  
 #wrapper div {
-  position:absolute;
+  /*position:absolute;*/
   background-color: rgba(255,255,255,0.5);
   padding: 1rem;
   bottom: 50%;
-  left: 50%;
-  right: 50%;
+  left: 23%;
+  right: 0;
 }
 	  
 #wrapper #score {
-  height: 180px;
+  position:fixed align-content:stretch;     
+  height: 500px;
+  width: 1000px;
   background: url(images/background2.jpg) center;
   background-color: rgba(255,255,255,1);
 }
