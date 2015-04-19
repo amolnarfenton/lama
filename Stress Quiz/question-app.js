@@ -56,7 +56,7 @@ function questionApp() {
     else if (answerArray[10] == aboveAvgAnswer){
       adviceText.innerHTML = "Oversleeping can be a symptom of many health issues such as depression, sleep apnea or hyposomnia! You may want to talk to your doctor about this.";
     }
-    
+
 
     //EXERCISE TEST
     if (answerArray[1] == belowAvgAnswer){
@@ -119,6 +119,7 @@ function questionApp() {
       choiceOption.innerHTML = eval(choice);
       questionSelect.appendChild(choiceOption);
     }
+    
     var initialChoice = document.createElement("option");
     initialChoice.innerHTML = "&lt;&lt; Click to choose &gt;&gt;";
     initialChoice.setAttribute("selected","selected");
