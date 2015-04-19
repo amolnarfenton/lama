@@ -1,6 +1,5 @@
 var Questions = { "question" : [
   {
-<<<<<<< HEAD
     "question"  : "On average, how many hours do you sleep per night?",
      "choice1"  : "< 6",
      "choice2"  : "6-10",
@@ -28,30 +27,5 @@ var Questions = { "question" : [
      "average"  : 2,
      "aboveAvg" : 3                           
   }
-  /*
-  {
-    "question"  : "Who takes over as headmaster of Hogwarts after Dumbledore's death?",
-     "choice1"  : "Voldemort",
-     "choice2"  : "Narcissa Black",
-     "choice3"  : "Professor Trelawny",
-              
-  },
-  
-  {
-    "question"  : "Who killed Deatheater Antonin Dolohov during the Battle of Hogwarts?",
-     "choice1"  : "Professor Flitwick",
-     "choice2"  : "Ron Weasley",
-     "choice3"  : "Falling Debris",
-            
-  }*/
-=======
-    "question"  : "How are you feeling today (1=bad, 5=AWESOME!)?",
-     "choice1"  : "1",
-     "choice2"  : "2",
-     "choice3"  : "3",
-     "choice4"  : "4",
-     "choice5"  : "5",                    
-     "correct"  : 1
-  }
->>>>>>> 5b5393b9a2b80becbbc9e3f21efab897874cec5e
+
 ]};
