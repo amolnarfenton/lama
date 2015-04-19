@@ -5,17 +5,26 @@ function questionApp() {
   var currentQuestion = 1;
   var questionCount = Questions.question.length;
   var wrapper = document.getElementById("wrapper");
+  var buttonDiv = document.getElementById("question-button");
   var answerArray = new Array(0);
+  var tipArray = new Array(0);
+  var avgAnswer;
+  var belowAvgAnswer;
+  var aboveAvgAnswer;
   
   var start = document.getElementById("start");
   start.setAttribute("disabled","disabled");
   
   function checkAnswer(question,userAnswer,button) {
+    console.log(userAnswer)
     var answerSplit = userAnswer.split("");
     var answerNumber = answerSplit[answerSplit.length-1];
-    var avgAnswer = question.average;
-    var belowAvgAnswer = question.belowAvg;
-    var aboveAvgAnswer = question.aboveAvg;
+
+    avgAnswer = question.average;
+    belowAvgAnswer = question.belowAvg;
+    aboveAvgAnswer = question.aboveAvg;
+
+
     if(answerNumber == avgAnswer) {
       avgScore++;
     } else if (answerNumber == belowAvgAnswer) {
@@ -23,6 +32,8 @@ function questionApp() {
     } else if (answerNumber == aboveAvgAnswer){
       aboveAvgScore++;
     }
+
+
     //PUTTING ANSWERS INTO ARRAY
     answerArray.push(answerNumber);
       console.log(answerArray);
@@ -42,20 +53,56 @@ function questionApp() {
   function finalScore() {
     var finalScore = document.createElement("div");
     var adviceText = document.createElement("h1");
-    wrapper.getElementById("content").innerHTML = finalScore;
+    wrapper.getElementsByClassName("content")[0].innerHTML = finalScore;
     finalScore.getElementById("h1").innterHTML = adviceText;
     finalScore.setAttribute("id","score");
     finalScore.className = "appear";
 
-    //SLEEP TEST
-    if (answerArray[0] == belowAvgAnswer){
-      adviceText.innerHTML = "You should sleep more!";
-    }
-    else if (answerArray[0] == avgAnswer){
-      adviceText.innerHTML = "Average amount of sleep";
+    for(j=0;j<3;j++) {
+
+    if (answerArray[j] == answerArray[0]){
+
+      //SLEEP TEST
+      if (answerArray[0] == belowAvgAnswer){
+        adviceText.innerHTML = "You should sleep more!";
+      }
+      else if (answerArray[0] == avgAnswer){
+        adviceText.innerHTML = "Average amount of sleep";
+      }
+      else if (answerArray[0] == aboveAvgAnswer){
+        adviceText.innerHTML = "Oversleeping can be a symptom of many health issues such as depression, sleep apnea or hyposomnia! You may want to talk to your doctor about this.";
+      }
     }
 
-    //finalScoreText.innerHTML = "Your final stress level is " + score + " out of " + questionCount +", I know exactly what you need right now...";
+
+    else if (answerArray[j] == answerArray[1]){
+      //EXERCISE TEST
+      if (answerArray[1] == belowAvgAnswer){
+        adviceText.innerHTML = "You should exercise more";
+      }
+      else if (answerArray[1] == avgAnswer){
+        adviceText.innerHTML = "Average amount of exercise!";
+      }
+      else if (answerArray[1] == aboveAvgAnswer){
+        adviceText.innerHTML = "This is above average for exercising";
+      }
+    }
+    
+
+    else if (answerArray[j] == answerArray[2]){
+      //PERSONAL TIME TEST
+      if (answerArray[2] == belowAvgAnswer){
+        adviceText.innerHTML = "You really need more personal time";
+      }
+      else if (answerArray[2] == avgAnswer){
+        adviceText.innerHTML = "This is a good amount of personal time";
+      }
+      else if (answerArray[2] == aboveAvgAnswer){
+        adviceText.innerHTML = "You got a lot of time on your hands";
+      }
+    }
+    }
+
     
     var resetButton = document.createElement("button");
     finalScore.getElementById("button").innerHTML = resetButton;
@@ -100,18 +147,21 @@ function questionApp() {
     initialChoice.setAttribute("selected","selected");
 //    questionSelect.getElementById("option").innerHTML = initialChoice;
     
-    var button = document.getElementsByClassName("question-button");
+    var button = document.createElement("button");
+    // buttonDiv.innerHTML = "";
+    buttonDiv.removeChild(buttonDiv.firstChild);
+    buttonDiv.appendChild(button);
 //    questionDiv.getElementById("button").innerHTML = button;
-//    var label = document.createTextNode("Submit");
-//    button[0].innerHTML = label;
-    button[0].setAttribute("id", "button"+currentQuestion);
+    var label = document.createTextNode("Submit");
+    button.appendChild(label);
+    button.setAttribute("id", "button"+currentQuestion);
     
 //    questionDiv.className = "appear";
         
-    var currentButton = button[0];
+    var currentButton = button;
 //      document.getElementById("button"+currentQuestion);
     
-    button[0].addEventListener('click', function(){checkAnswer(selectedQuestion,questionSelect.value,currentButton);}, false);
+    currentButton.addEventListener('click', function(){checkAnswer(selectedQuestion,questionSelect.value,currentButton);}, false);
   }
   
   generateQuestion();

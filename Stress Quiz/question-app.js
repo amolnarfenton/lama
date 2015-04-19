@@ -10,7 +10,6 @@ function questionApp() {
   var avgAnswer;
   var belowAvgAnswer;
   var aboveAvgAnswer;
-
   
   var start = document.getElementById("start");
   start.setAttribute("disabled","disabled");
@@ -35,13 +34,10 @@ function questionApp() {
 
     //PUTTING ANSWERS INTO ARRAY
     answerArray.push(answerNumber);
-    console.log("this is answer number" +answerNumber);
-    console.log("this is the array" + answerArray);
-
+      console.log(answerArray);
 
     //button.setAttribute("disabled","disabled");
 
-            
     if(currentQuestion === questionCount) {
       finalScore();
     } else {
@@ -52,15 +48,13 @@ function questionApp() {
     }
   }
 
-  
   function finalScore() {
     var finalScore = document.createElement("div");
     var adviceText = document.createElement("h1");
-    wrapper.appendChild(finalScore);
-    finalScore.appendChild(adviceText);
+    wrapper.getElementById("content").innerHTML = finalScore;
+    finalScore.getElementById("h1").innterHTML = adviceText;
     finalScore.setAttribute("id","score");
     finalScore.className = "appear";
-
 
     for(j=0;j<3;j++) {
 
@@ -107,10 +101,6 @@ function questionApp() {
     }
     }
 
-
-
-
-    //finalScoreText.innerHTML = "Your final stress level is " + score + " out of " + questionCount +", I know exactly what you need right now...";
     
     var resetButton = document.createElement("button");
     finalScore.appendChild(resetButton);
