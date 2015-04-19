@@ -57,10 +57,10 @@ function questionApp() {
     var finalScore = document.createElement("div");
     var adviceText = document.createElement("h1");
     wrapper.getElementsByClassName("content")[0].innerHTML = finalScore;
-//    finalScore.getElementById("content").innterHTML = adviceText;
+    finalScore.getElementsByClassName("content").innterHTML = adviceText;
     finalScore.setAttribute("id","score");
     finalScore.className = "appear";
-
+      console.log("Everyone get some sleep!")
     for(j=0;j<3;j++) {
 
     if (answerArray[j] == answerArray[0]){
