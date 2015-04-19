@@ -1,6 +1,5 @@
 var Questions = { "question" : [
   {
-<<<<<<< HEAD
     "question"  : "How are you feeling today (1=bad, 5=AWESOME!)?",
      "choice1"  : "1",
      "choice2"  : "2",
@@ -8,8 +7,8 @@ var Questions = { "question" : [
      "choice4"  : "4",
      "choice5"  : "5",                    
      "correct"  : 1
-  }
-=======
+  },
+  {
     "question"  : "On average, how many hours do you sleep per night?",
      "choice1"  : "< 6",
      "choice2"  : "6-10",
@@ -17,8 +16,7 @@ var Questions = { "question" : [
      "belowAvg" : 1,
      "average"  : 2,
      "aboveAvg" : 3            
-  },
-  
+  },  
   {
     "question"  : "How often do you exercise in a typical week?",
      "choice1"  : "Never",
@@ -27,8 +25,7 @@ var Questions = { "question" : [
      "belowAvg" : 1,
      "average"  : 2,
      "aboveAvg" : 3             
-  },
-  
+  },  
   {
     "question"  : "How much personal time do you take per day, in hours?",
      "choice1"  : "0-4",
@@ -54,5 +51,4 @@ var Questions = { "question" : [
      "choice3"  : "Falling Debris",
             
   }*/
->>>>>>> 33b3e2c43e64be0c0e61d92f60b93cff987a8265
 ]};
