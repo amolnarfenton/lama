@@ -49,10 +49,10 @@ function questionApp() {
     finalScore.className = "appear";
 
     //SLEEP TEST
-    if (answerArray[0] = belowAvgAnswer){
+    if (answerArray[0] == belowAvgAnswer){
       adviceText.innerHTML = "You should sleep more!";
     }
-    else if (answerArray[10] = avgAnswer){
+    else if (answerArray[10] == avgAnswer){
       adviceText.innerHTML = "Average amount of sleep";
     }
 
